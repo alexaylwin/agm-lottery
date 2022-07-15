@@ -2,19 +2,12 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Pick } from './components/pick';
-import { Odds } from './models/odds';
+import { defaultOdds, Odds } from './models/odds';
 
 
 
 function App() {
-  const defaultOdds: Odds[] = [
-    { team: 1, count: 1 },
-    { team: 2, count: 2 },
-    { team: 3, count: 3 },
-    { team: 4, count: 4 },
-    { team: 5, count: 5 },
-    { team: 6, count: 6 }
-  ]
+
   
   const [odds, setOdds] = useState(defaultOdds);
 
