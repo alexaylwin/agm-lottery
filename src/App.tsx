@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Pick } from './components/pick';
 import { defaultOdds, Odds } from './models/odds';
-
+import logo from './logo.png';
 
 
 function App() {
@@ -12,21 +11,17 @@ function App() {
   const [odds, setOdds] = useState(defaultOdds);
 
   const handlePick = (team: number) => { 
-    console.log('team - ' + team );
     const i = odds.findIndex( (odd: Odds) => odd.team === team );
     const o = [...odds];
     o.splice(i, 1);
     setOdds(o);
-    // setOdds(
-    //   odds.splice( odds.findIndex( (odd) => odd.team == team), 1)
-    // );
   }
 
   return (
     <div className="h-screen w-full m-auto bg-neutral-500 text-gray-300">
-      <header className="flex-col flex border-b-2 mb-8 pb-2">
-        <div className='' onClick={() => console.log(odds)}>Bowman AGM 2022</div>
-        <div className='grow flex justify-center'>
+      <header className="flex justify-between border-b-2 mb-8 pb-2 pl-1">
+        <div className="flex justify-start" ><img src={ logo } className="w-16"></img></div>
+        <div className='grow flex justify-center self-center -ml-16'>
           <h1 className="text-4xl">Draft Lottery</h1>
         </div>
       </header>
