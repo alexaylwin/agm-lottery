@@ -44,13 +44,13 @@ export const RollerFancy = (props: {
     <div className="roller w-auto flex flex-row justify-center">
       <button 
         className={ (showButton ? '' : 'hidden') + ` rounded-xl px-1 py-1 border-blue-300 border-4 text-2xl text-blue-300
-          hover:bg-black hover:bg-opacity-25 hover:text-blue-100 hover:border-blue-100
-          transition duration-300`
+          hover:bg-slate-800 hover:bg-opacity-25 hover:text-blue-100 hover:border-blue-100
+          transition duration-1000`
         }
         onClick={() => startRoll() }>DRAW PICK #{num} </button>
         <div className={( !rollDone && !showButton ? '' : 'hidden') + " grid grid-cols-3 gap-4 px-5"}>
           {odds.map( (o) => { return (
-              <div className={(o.teamName == cn ? "text-blue-400 " : "text-blue-100 ") + "transition-colors duration-150"}>{o.teamName}</div>
+              <div className={(o.teamName == cn ? "text-slate-800 " : "text-slate-100 ") + "transition-colors duration-150"}>{o.teamName}</div>
             )
           })}
         </div>

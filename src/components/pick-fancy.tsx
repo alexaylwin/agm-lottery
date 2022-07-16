@@ -17,11 +17,11 @@ export const PickFancy = (props: { num: number, odds: Odds[], handlePick: (team:
   );
   
   return (
-<div className={ (donePick ? "bg-gray-800" : "") + " transition-all duration-1000 pick mb-5 text-3xl flex flex-col border-y py-8 my-4"}>
+<div className={ (donePick ? "bg-slate-900" : "") + " transition-all duration-1000 pick mb-5 text-3xl flex flex-col border-y-2 py-8 my-4"}>
           <div className="flex flex-row justify-center">
             <RollerFancy num={num} odds={odds} handlePick={(n:number) => { setDonePick(true); handlePick(n) }}></RollerFancy>
           </div>
-          <div className={(donePick ? "hidden" : "") + " text-base flex flex-row  justify-around mt-5 px-5"}>
+          <div className={(donePick ? "hidden" : "") + " text-base flex flex-row  justify-center mt-5 px-5"}>
             { percentageOdds.map((v, i) => (<div className=" border-2 border-gray-200 py-1 px-2" key={i}><span className="font-bold mr-1">{v.teamName}</span>{v.percent + '%'}</div>)) }
           </div>
         </div>    

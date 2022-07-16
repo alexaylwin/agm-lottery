@@ -23,10 +23,10 @@ function App() {
 
   return (
     <div className="w-full m-auto text-gray-300">
-      <header className="flex justify-between border-b-2 mb-8 pb-2 pl-1">
+      <header className="flex justify-between mb-8 pb-2 pl-1 bg-slate-400 border-b-slate-600 border-b-2">
         <div className="flex justify-start" ><img src={ logo } className="w-16"></img></div>
         <div className='grow flex justify-center self-center -ml-16'>
-          <h1 className="text-4xl">Draft Lottery</h1>
+          <h1 className="text-4xl text-slate-800 font-extrabold">Draft Lottery</h1>
         </div>
       </header>
       <main className="flex flex-col w-full">
