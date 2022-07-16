@@ -21,8 +21,8 @@ export const PickFancy = (props: { num: number, odds: Odds[], handlePick: (team:
           <div className="flex flex-row justify-center">
             <RollerFancy num={num} odds={odds} handlePick={(n:number) => { setDonePick(true); handlePick(n) }}></RollerFancy>
           </div>
-          <div className={(donePick ? "hidden" : "") + " text-base flex flex-row justify-center mt-5"}>
-            |&nbsp;{ percentageOdds.map((v, i) => (<span key={i}>{v.teamName + ' - ' + v.percent + '%'} |&nbsp;</span>)) }
+          <div className={(donePick ? "hidden" : "") + " text-base flex flex-row  justify-around mt-5 px-5"}>
+            { percentageOdds.map((v, i) => (<div className=" border-2 border-gray-200 py-1 px-2" key={i}><span className="font-bold mr-1">{v.teamName}</span>{v.percent + '%'}</div>)) }
           </div>
         </div>    
   )

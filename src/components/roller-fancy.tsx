@@ -48,7 +48,7 @@ export const RollerFancy = (props: {
           transition duration-300`
         }
         onClick={() => startRoll() }>DRAW PICK #{num} </button>
-        <div className={( !rollDone && !showButton ? '' : 'hidden') + " grid grid-cols-3 "}>
+        <div className={( !rollDone && !showButton ? '' : 'hidden') + " grid grid-cols-3 gap-4 px-5"}>
           {odds.map( (o) => { return (
               <div className={(o.teamName == cn ? "text-blue-400 " : "text-blue-100 ") + "transition-colors duration-150"}>{o.teamName}</div>
             )
