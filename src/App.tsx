@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { Pick } from './components/pick';
+import { PickFancy } from "./components/pick-fancy";
 import { defaultOdds, Odds } from './models/odds';
 import logo from './logo.png';
 
@@ -30,22 +31,22 @@ function App() {
       </header>
       <main className="flex flex-col w-full">
         <div className={lastPick >= 0 ? '' : 'hidden'}>
-          <Pick num={1} odds={odds} handlePick={handlePick}></Pick>
+          <PickFancy num={1} odds={odds} handlePick={handlePick}></PickFancy>
         </div>
         <div className={lastPick >= 1 ? '' : 'hidden'}>
-          <Pick num={2} odds={odds} handlePick={handlePick}></Pick>
+          <PickFancy num={2} odds={odds} handlePick={handlePick}></PickFancy>
         </div>
         <div className={lastPick >= 2 ? '' : 'hidden'}>
-        <Pick num={3} odds={odds} handlePick={handlePick}></Pick>
+        <PickFancy num={3} odds={odds} handlePick={handlePick}></PickFancy>
         </div>
         <div className={lastPick >= 3 ? '' : 'hidden'}>
-        <Pick num={4} odds={odds} handlePick={handlePick}></Pick>
+        <PickFancy num={4} odds={odds} handlePick={handlePick}></PickFancy>
         </div>
         <div className={lastPick >= 4 ? '' : 'hidden'}>
-        <Pick num={5} odds={odds} handlePick={handlePick}></Pick>
+        <PickFancy num={5} odds={odds} handlePick={handlePick}></PickFancy>
         </div>
         <div className={lastPick >= 5 ? '' : 'hidden'}>
-        <Pick num={6} odds={odds} handlePick={handlePick}></Pick>
+        <PickFancy num={6} odds={odds} handlePick={handlePick}></PickFancy>
         </div>
       </main>
     </div>
