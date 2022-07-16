@@ -9,12 +9,15 @@ function App() {
 
   
   const [odds, setOdds] = useState(defaultOdds);
+  const [lastPick, setLastPick] = useState(0);
 
   const handlePick = (team: number) => { 
     const i = odds.findIndex( (odd: Odds) => odd.team === team );
     const o = [...odds];
     o.splice(i, 1);
     setOdds(o);
+    const cp = lastPick + 1;
+    setLastPick(cp);
   }
 
   return (
@@ -26,12 +29,24 @@ function App() {
         </div>
       </header>
       <main className="flex flex-col w-full">
-        <Pick num={1} odds={odds} handlePick={handlePick}></Pick>
-        <Pick num={2} odds={odds} handlePick={handlePick}></Pick>
+        <div className={lastPick >= 0 ? '' : 'hidden'}>
+          <Pick num={1} odds={odds} handlePick={handlePick}></Pick>
+        </div>
+        <div className={lastPick >= 1 ? '' : 'hidden'}>
+          <Pick num={2} odds={odds} handlePick={handlePick}></Pick>
+        </div>
+        <div className={lastPick >= 2 ? '' : 'hidden'}>
         <Pick num={3} odds={odds} handlePick={handlePick}></Pick>
+        </div>
+        <div className={lastPick >= 3 ? '' : 'hidden'}>
         <Pick num={4} odds={odds} handlePick={handlePick}></Pick>
+        </div>
+        <div className={lastPick >= 4 ? '' : 'hidden'}>
         <Pick num={5} odds={odds} handlePick={handlePick}></Pick>
+        </div>
+        <div className={lastPick >= 5 ? '' : 'hidden'}>
         <Pick num={6} odds={odds} handlePick={handlePick}></Pick>
+        </div>
       </main>
     </div>
   );
