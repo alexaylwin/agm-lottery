@@ -22,7 +22,7 @@ function App() {
   }
 
   return (
-    <div className="h-screen w-full m-auto bg-neutral-500 text-gray-300">
+    <div className="w-full m-auto text-gray-300">
       <header className="flex justify-between border-b-2 mb-8 pb-2 pl-1">
         <div className="flex justify-start" ><img src={ logo } className="w-16"></img></div>
         <div className='grow flex justify-center self-center -ml-16'>
